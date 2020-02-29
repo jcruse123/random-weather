@@ -18,9 +18,14 @@ router.get('/:number', (req, res) => {
   randomPromises.push(
     axios.get(`https://www.random.org/integers/?num=${req.params.number}&min=-89&max=89&col=1&base=10&format=plain&rnd=new`)
       .then(response => {
-        latitudes = response.data.trim().split('\n').map(item => {
-          return parseInt(item)
-        });
+        try {
+          latitudes = response.data.trim().split('\n').map(item => {
+            return parseInt(item)
+          });
+        }
+        catch {
+          latitudes.push(parseInt(response.data))
+        }
     })
   )
 
@@ -28,9 +33,14 @@ router.get('/:number', (req, res) => {
   randomPromises.push(
     axios.get(`https://www.random.org/integers/?num=${req.params.number}&min=-180&max=180&col=1&base=10&format=plain&rnd=new`)
       .then(response => {
-        longitudes = response.data.trim().split('\n').map(item => {
-          return parseInt(item)
-        });
+        try {
+          longitudes = response.data.trim().split('\n').map(item => {
+            return parseInt(item)
+          });
+        }
+        catch {
+          longitudes.push(parseInt(response.data))
+        }
     })
   )
 

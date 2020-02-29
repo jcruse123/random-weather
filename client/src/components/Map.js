@@ -20,7 +20,7 @@ class Map extends React.Component {
         height: 500,
         latitude: 30,
         longitude: 0,
-        zoom: 1
+        zoom: 2
       },
       selectedPoint: null
     }

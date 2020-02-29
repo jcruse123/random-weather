@@ -12,10 +12,10 @@ The quickest way to run the application is to visit http://random-weather.heroku
 
 Local Installation:
 
-1. Clone the repository from GitHub using https://github.com/jcruse123/random-weather.git
+1. Clone the repository from GitHub by going to https://github.com/jcruse123/random-weather.git and clicking the "Clone or download" button.
 2. If you do not have npm installed, follow the instructions at https://www.npmjs.com/get-npm to install npm.
 3. Using your preferred terminal application, navigate to the root folder of the cloned repository.
-4. Run the command: 'npm install'
+4. Run the command: 'npm install'.
 5. Using your terminal, navigate to the client folder inside the root folder of the repository.
 6. Run the command: 'npm install'. This will take a few minutes.
 7. Navigate back to the root folder using 'cd ..' in your terminal.
