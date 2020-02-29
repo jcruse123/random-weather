@@ -11,18 +11,23 @@ class LocationsInput extends React.Component {
     showModal: false
   }
 
+  // This function closes the invalid input Modal.
   onClose = () => {
     this.setState({
       showModal: false
     })
   }
 
+  // Controls the input field.
   onCountChange = e => {
     this.setState({
       count: e.target.value
     })
   }
 
+  // This function validates the input,
+  // then displays a Modal if input is invalid,
+  // or returns the valid input to the parent Component.
   onGetLocations = e => {
     e.preventDefault()
     if (typeof(parseInt(this.state.count)) === "number" && parseInt(this.state.count) < 50 && parseInt(this.state.count) > 0) {
@@ -35,6 +40,7 @@ class LocationsInput extends React.Component {
     }
   }
 
+  // This function renders the validation Modal and LocationsInput form.
   render() {
     return (
       <div className="mb-4">

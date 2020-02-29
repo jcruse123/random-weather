@@ -27,6 +27,8 @@ class Map extends React.Component {
 
     render() {
 
+      // This object is used to correlate weather conditions
+      // with the corresponding icon.
       const icons = {
         "Clouds": clouds,
         "Snow": snow,
@@ -35,12 +37,14 @@ class Map extends React.Component {
         "Mist": mist
       }
 
+      // This is used later to format the weather conditions string.
       const capitalize = (str) => {
         return str.replace(/\w\S*/g, function(txt){
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
       }
 
+      // This function renders the map and the clickable map markers.
       return (
         <ReactMapGL
           {...this.state.viewport}
@@ -107,5 +111,6 @@ class Map extends React.Component {
       );
     }
   }
+
 
 export default Map
