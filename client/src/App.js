@@ -36,7 +36,7 @@ class App extends React.Component {
             <h1 className="display-4">Random Weather</h1>
             <hr />
             <p>
-              This application displays a number locations along with weather data from those locations.
+              This application displays a number of locations along with weather data from those locations.
               Click on a map marker to display detailed weather information.
             </p>
           </Jumbotron>
