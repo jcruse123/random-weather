@@ -35,7 +35,10 @@ class App extends React.Component {
           <Jumbotron className="pt-4 pb-4">
             <h1 className="display-4">Random Weather</h1>
             <hr />
-            <p>This application takes a number and shows you that many locations along with weather data from those locations.</p>
+            <p>
+              This application displays a number locations along with weather data from those locations.
+              Click on a map marker to display detailed weather information.
+            </p>
           </Jumbotron>
           <LocationsInput countUpdate={this.countUpdate} />
         </Container>

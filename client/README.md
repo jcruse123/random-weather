@@ -1,3 +1,3 @@
 # random-weather
 
-This is the frontend client for random-weather built with React.
+This folder contains the front end client for random-weather.
