@@ -46,9 +46,9 @@ class App extends React.Component {
           <Map weatherPoints={this.state.weatherPoints} />
           <hr />
         <Container className="mb-5 mt-5">
-          <p>Map data provided by Mapbox-GL.</p>
-          <p>Weather data provided by Open Weather Map.</p>
-          <p>Website design by Joshua Cruse.</p>
+          <p className="mt-1 mb-1">Map data provided by Mapbox-GL.</p>
+          <p className="mt-1 mb-1">Weather data provided by Open Weather Map.</p>
+          <p className="mt-1 mb-1">Random number generation provided by www.random.org.</p>
         </Container>
       </div>
     );
