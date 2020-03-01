@@ -12,6 +12,8 @@ import rain from '../img/ico/weather/rain.svg'
 import mist from '../img/ico/weather/mist.svg'
 import thunderstorm from '../img/ico/weather/thunderstorm.svg'
 import drizzle from '../img/ico/weather/drizzle.svg'
+import squall from '../img/ico/weather/squall.svg'
+import tornado from '../img/ico/weather/tornado.svg'
 
 
 class Map extends React.Component {
@@ -37,6 +39,14 @@ class Map extends React.Component {
         "Clear": clear,
         "Rain": rain,
         "Mist": mist,
+        "Smoke": mist,
+        "Haze": mist,
+        "Dust": mist,
+        "Fog": mist,
+        "Sand": mist,
+        "Ash": mist,
+        "Squall": squall,
+        "Tornado": tornado,
         "Thunderstorm": thunderstorm,
         "Drizzle": drizzle
       }
