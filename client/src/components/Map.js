@@ -10,6 +10,8 @@ import snow from '../img/ico/weather/snow.svg'
 import clear from '../img/ico/weather/clear.svg'
 import rain from '../img/ico/weather/rain.svg'
 import mist from '../img/ico/weather/mist.svg'
+import thunderstorm from '../img/ico/weather/thunderstorm.svg'
+import drizzle from '../img/ico/weather/drizzle.svg'
 
 
 class Map extends React.Component {
@@ -34,7 +36,9 @@ class Map extends React.Component {
         "Snow": snow,
         "Clear": clear,
         "Rain": rain,
-        "Mist": mist
+        "Mist": mist,
+        "Thunderstorm": thunderstorm,
+        "Drizzle": drizzle
       }
 
       // This is used later to format the weather conditions string.
@@ -60,7 +64,7 @@ class Map extends React.Component {
         </div>
         {this.props.weatherPoints.map(weatherPoint => (
           <Marker
-            key={weatherPoint.coord.lat / weatherPoint.coord.lon}
+            key={(weatherPoint.coord.lat / weatherPoint.coord.lon) + Math.random()}
             latitude={weatherPoint.coord.lat}
             longitude={weatherPoint.coord.lon}
           >
@@ -93,7 +97,7 @@ class Map extends React.Component {
                 className="mt-0 mb-0"
                 width="60"
                 height="60"
-                alt="weather"
+                alt="Weather"
                 src={icons[this.state.selectedPoint.weather[0].main]}
               />
 
