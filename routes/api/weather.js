@@ -16,7 +16,9 @@ router.get('/:number', (req, res) => {
 
   // Request specified number of latitudes from random.org
   randomPromises.push(
-    axios.get(`https://www.random.org/integers/?num=${req.params.number}&min=-89&max=89&col=1&base=10&format=plain&rnd=new`)
+    // Latitudes restricted to -85 to 85 as points too close to the poles
+    // do not display correctly.
+    axios.get(`https://www.random.org/integers/?num=${req.params.number}&min=-85&max=85&col=1&base=10&format=plain&rnd=new`)
       .then(response => {
         try {
           latitudes = response.data.trim().split('\n').map(item => {

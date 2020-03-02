@@ -113,8 +113,8 @@ class Map extends React.Component {
 
               <p className="mb-1 mt-1">Conditions: {capitalize(this.state.selectedPoint.weather[0].description)}</p>
               <p className="mb-1 mt-1">Temperature: {(this.state.selectedPoint.main.temp - 273.15).toFixed(2)} °C</p>
-              <p className="mb-1 mt-1">Humidity: {this.state.selectedPoint.main.humidity}</p>
-              <p className="mb-1 mt-1">Wind Speed: {this.state.selectedPoint.wind.speed}</p>
+              <p className="mb-1 mt-1">Humidity: {this.state.selectedPoint.main.humidity}%</p>
+              <p className="mb-1 mt-1">Wind Speed: {this.state.selectedPoint.wind.speed} m/s</p>
               <hr className="mb-1 mt-2" />
               <p className="mb-1 mt-1">Latitude: {this.state.selectedPoint.coord.lat}</p>
               <p className="mb-1 mt-1">Longitude: {this.state.selectedPoint.coord.lon}</p>

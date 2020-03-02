@@ -30,8 +30,9 @@ class LocationsInput extends React.Component {
   // or returns the valid input to the parent Component.
   onGetLocations = e => {
     e.preventDefault()
-    if (typeof(parseInt(this.state.count)) === "number" && parseInt(this.state.count) <= 50 && parseInt(this.state.count) > 0) {
-      this.props.countUpdate(this.state.count)
+    if (/^\d+$/.test(this.state.count) && parseInt(this.state.count) <= 50 && parseInt(this.state.count) > 0) {
+      this.props.countUpdate(parseInt(this.state.count))
+      console.log(parseInt(this.state.count))
     }
     else {
       this.setState({
