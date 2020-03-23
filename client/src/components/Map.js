@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import ReactMapGL, {
   Marker,
   Popup,
@@ -74,7 +75,7 @@ class Map extends React.Component {
         </div>
         {this.props.weatherPoints.map(weatherPoint => (
           <Marker
-            key={(weatherPoint.coord.lat / weatherPoint.coord.lon) + Math.random()}
+            key={uuidv4()}
             latitude={weatherPoint.coord.lat}
             longitude={weatherPoint.coord.lon}
           >
